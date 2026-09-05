@@ -29,8 +29,10 @@
       <nav class="nav" aria-label="Section navigation">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#map">Map</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
+        <a href="#languages">Languages</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -130,6 +132,20 @@
         
       </ol>
     </section>
+    
+    <section id="map" class="section">
+      <p class="eyebrow">Map</p>
+      <h2>Where I've worked</h2>
+      <p>Click a pin (or a place name below) to see the roles I held there.</p>
+    
+      <div id="world-map" class="world-map"></div>
+    
+      <div id="map-legend" class="map-legend"></div>
+    
+      <div id="map-detail" class="map-detail">
+        <p class="map-placeholder">Select a location to see details.</p>
+      </div>
+    </section>
 
     <section id="projects" class="section">
       <p class="eyebrow">03</p>
@@ -170,6 +186,17 @@
         <li>R, Python, SQL</li>
       </ul>
     </section>
+    
+    <section id="languages" class="section">
+      <p class="eyebrow">05</p>
+      <h2>Languages</h2>
+      <ul class="skills-list">
+        <li>English (fluent)</li>
+        <li>Spanish (conversational)</li>
+        <li>Icelandic (conversational)</li>
+        <li>Cantonese (beginner)</li>
+      </ul>
+    </section>
 
     <section id="contact" class="section section-contact">
       <p class="eyebrow">05</p>
@@ -191,6 +218,10 @@
   </main>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson-client/3.1.0/topojson-client.min.js"></script>
+<script src="map-data.js"></script>
+<script src="map.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

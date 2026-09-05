@@ -312,3 +312,124 @@ h1, h2, h3 {
 
   .project-grid { grid-template-columns: 1fr; }
 }
+
+
+/* ---------- World map ---------- */
+.world-map {
+  margin: 1.5rem 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #EAE7DD;
+}
+
+.map-country {
+  fill: #DCD8CB;
+  stroke: #EAE7DD;
+  stroke-width: 0.5;
+}
+
+.map-pin {
+  fill: var(--accent-warm);
+  stroke: var(--paper);
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: r 0.15s ease, fill 0.15s ease;
+}
+
+.map-pin:hover,
+.map-pin:focus-visible {
+  fill: var(--accent);
+  r: 8;
+  outline: none;
+}
+
+.map-pin.active {
+  fill: var(--accent);
+  r: 9;
+}
+
+.map-error {
+  padding: 2rem;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.map-legend-item {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  cursor: pointer;
+}
+
+.map-legend-item:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.map-detail {
+  border-top: 1px solid var(--line);
+  padding-top: 1.5rem;
+}
+
+.map-detail h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.map-placeholder {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.map-role-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.map-role {
+  border-left: 2px solid var(--line);
+  padding-left: 1rem;
+}
+
+.map-role-years {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.15rem 0;
+}
+
+.map-role h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0 0 0.15rem 0;
+}
+
+.map-role-org {
+  font-size: 0.85rem;
+  color: var(--accent-warm);
+  margin: 0 0 0.4rem 0;
+}
+
+.map-role-note {
+  font-size: 0.9rem;
+  margin: 0;
+}
