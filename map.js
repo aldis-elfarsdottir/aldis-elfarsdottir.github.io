@@ -11,7 +11,7 @@
     .append("svg")
     .attr("viewBox", `0 0 ${width} ${height}`)
     .attr("width", "100%")
-    .attr("height", "auto");
+    .style("height", "auto");
 
   const projection = d3.geoNaturalEarth1();
   const path = d3.geoPath(projection);
@@ -54,7 +54,8 @@
       // Open the first location by default so the panel isn't empty.
       if (MAP_LOCATIONS.length) selectLocation(MAP_LOCATIONS[0], pins);
     })
-    .catch(() => {
+    .catch((err) => {
+      console.error("World map failed to load:", err);
       container.innerHTML =
         '<p class="map-error">Map failed to load. Check your internet connection and refresh.</p>';
     });
